@@ -1,0 +1,45 @@
+body {
+    background-color: steelblue
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Luckiest Guy', regular;
+    color: whitesmoke;
+    font-size: 60px;
+}
+
+h2 {
+    font-family: 'Luckiest Guy',
+    regular;
+    color: whitesmoke;
+}
+
+h3 {
+    font-size: 30px;
+}
+
+i.big.icon {
+    font-size: 4em;
+    color: red;
+   
+}
+
+div.value {
+text-align: center;
+display: inline-block;
+}
+
+stat {
+    font-size: 3em;
+}
+
+.ui.card,
+.ui.cards>.card {
+    background-color: rgb(47, 33, 129);
+}
+
+.ui.cards>.card>.content>.header:not(.ui) {
+    font-size: 2.5em;
+    color: whitesmoke;
+}
