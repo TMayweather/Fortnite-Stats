@@ -1,12 +1,15 @@
 <% include partials/header %>
 <div class="ui container">
-
-<h1>Fortnite comparison app</h1>
-
-<h2><%= playerInfo['epicUserHandle'] %></h2>
+    <h1>FORTNITE STATS</h1>
+<div>
+   <h2><%= playerInfo['epicUserHandle'] %></h2>
 <h2>
     <%= playerInfo['platformNameLong'] %>
-</h2>
+</h2> 
+</div>
+
+
+
 <% var playerOne = {} %>
 
 
@@ -32,7 +35,7 @@
                                     <div class="ui grey inverted raised segment">
                                         <h3>LIFETIME STATS:</h3>
                                             <div class="ui four cards">
-                                                <div class="green card">
+                                                <div class="green raised card">
                                                     
                                                         
                                                         <div class="content">
@@ -90,6 +93,7 @@
 
                                            
                         </div>
+                        <a class="ui button" href="/">HOME</a>
                         </div>
-<a class="ui button" href="/">home</a>
+
 <% include partials/footer %>

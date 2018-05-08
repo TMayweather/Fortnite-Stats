@@ -1,11 +1,11 @@
 <% include partials/header %>
 <h1>FORTNITE BATTLE ROYALE STATS</h1>
 
+<h2><%=status%></h2>
 
 
-
-
-<form action="/stats" method="get">
+<div class="ui container">
+    <form action="/stats" method="get">
     <div class="ui input focus">
             <input type="text" placeholder="User Name" name="user">
         </div>
@@ -16,5 +16,7 @@
         
     <button type="submit" class="ui blue button">Go</button>
 </form>
+</div>
+
 <a href="/stats">Stats</a>
 <% include partials/footer %>

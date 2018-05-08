@@ -1,17 +1,23 @@
 body {
     background-color: steelblue
 }
+@font-face {
+    font-family: "BurbankBigCondensed-Black";
+    src:url("/font/BurbankBigCondensed-Black.otf") format('opentype');
+}
 
-h1 {
+h1:first-child {
     text-align: center;
-    font-family: 'Luckiest Guy', regular;
+    font-family: 'BurbankBigCondensed-Black',
+    sans-serif;
     color: whitesmoke;
     font-size: 60px;
+    margin-top: 200px;
 }
 
 h2 {
-    font-family: 'Luckiest Guy',
-    regular;
+   font-family: 'BurbankBigCondensed-Black',
+   sans-serif;
     color: whitesmoke;
 }
 
