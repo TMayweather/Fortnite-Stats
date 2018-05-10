@@ -1,17 +1,17 @@
-body {
-    background-color: steelblue
-}
 @font-face {
     font-family: "BurbankBigCondensed-Black";
     src:url("/font/BurbankBigCondensed-Black.otf") format('opentype');
 }
 
-h1:first-child {
+body {
+    background-color: steelblue;
+}
+
+h1 {
     text-align: center;
-    font-family: 'BurbankBigCondensed-Black',
-    sans-serif;
+    font-family: "BurbankBigCondensed-Black";
     color: whitesmoke;
-    font-size: 60px;
+    font-size: 80px;
     margin-top: 200px;
 }
 
@@ -21,8 +21,8 @@ h2 {
     color: whitesmoke;
 }
 
-h3 {
-    font-size: 30px;
+.section {
+font-size: 40px;
 }
 
 i.big.icon {
@@ -36,8 +36,37 @@ text-align: center;
 display: inline-block;
 }
 
-stat {
-    font-size: 3em;
+
+.status {
+text-align: right;
+ font-family: 'BurbankBigCondensed-Black',
+ sans-serif;
+ color: whitesmoke;
+ font-size: 30px;
+ margin-top: 20px;
+ margin-right:20px;
+}
+
+.statusLight {
+    color: rgb(30, 199, 66);
+}
+.ui.items>.item>.content>.header:not(.ui) {
+  font-size: 30px;   
+}
+.ui.items>.item>.content>.header {
+   text-align: center;
+    color: whitesmoke;
+    font-family: 'BurbankBigCondensed-Black',
+    sans-serif;
+}
+
+div.item {
+    height: 250px;
+}
+
+.description{
+    font-family: "Tahoma", sans-serif;
+    font-size: 15px;
 }
 
 .ui.card,

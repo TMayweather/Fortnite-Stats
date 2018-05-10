@@ -1,22 +1,72 @@
 <% include partials/header %>
+
+<p class="status">FORTNITE SERVER STATUS:
+   <% if(status===true){ %>
+    <span class="statusLight">
+        UP AND RUNNING
+    </span>
+   <% } else { %>
+       <span>
+        DOWN
+    </span>
+  <% } %>
+    
+</p>
+
 <h1>FORTNITE BATTLE ROYALE STATS</h1>
 
-<h2><%=status%></h2>
 
 
 <div class="ui container">
-    <form action="/stats" method="get">
-    <div class="ui input focus">
+    <div class="ui form">
+         <form action="/stats" method="get">
+            <div class="fields">
+                  <div class="eight wide field">
+               <div class="ui icon input focus">
+        <i class="search icon"></i>
             <input type="text" placeholder="User Name" name="user">
-        </div>
+        </div>   
+            </div>
+  
         <div class="ui input focus">
             <input type="text" placeholder="Platform" name="platform">
         </div>
+            </div>
+          
 
         
     <button type="submit" class="ui blue button">Go</button>
-</form>
+</form> 
+    </div>
+  
 </div>
 
 <a href="/stats">Stats</a>
+
+
+<div class="ui container">
+    <div class="ui divided items">
+    <h2 class="section">NEWS!</h2>
+   <% news.forEach((article)=>{ %>
+    <div class="item">
+        <div class="ui image">
+            <img src="<%=article.image%>" alt="">
+        </div>
+        <div class="content">
+            <h3 class="newsTitle header"><%=article.title%></h3>
+        
+        <div class="description">
+             <p><%=article.body%></p>
+        </div>
+        </div>
+        
+       
+    </div>
+        
+  <%  }) %>
+
+    
+
+</div>
+</div>
 <% include partials/footer %>

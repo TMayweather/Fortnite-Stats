@@ -1,99 +1,78 @@
 <% include partials/header %>
-<div class="ui container">
-    <h1>FORTNITE STATS</h1>
-<div>
-   <h2><%= playerInfo['epicUserHandle'] %></h2>
-<h2>
-    <%= playerInfo['platformNameLong'] %>
-</h2> 
-</div>
+    <div class="ui container">
+        <h1>FORTNITE STATS</h1>
+        <div>
+            <h2>
+                <%= info.username %>
+            </h2>
+            <h2>
+                <%= info.platform %>
+            </h2>
+        </div>
+
+    <div class="ui container">
+            <div class="ui grey inverted raised segment">
+                <h3>LIFETIME STATS:</h3>
+                <div class="ui four cards">
+                    <div class="raised card">
 
 
+                        <div class="content">
+                            <div class="left floated ui image">
+                                <i class="big history icon"></i>
+                            </div>
+                            <div class="right aligned header">
+                                <%=lifetimeStats.matches%>
+                            </div>
 
-<% var playerOne = {} %>
-
-
-    <% playerStat.forEach((stat)=> { %>
-        
-        <% if(stat['key'] == 'Wins') { %>
-            <% playerOne['wins'] = stat['value'] %>
-
-                <% } %>
-                    <%  if(stat['key'] == 'Kills') { %>
-                        <%   playerOne['kills'] = stat['value'] %>
-                        
-                            <% } if (stat["key"] == "Matches Played") { %>
-                                <%  playerOne["matches"] = stat["value"] %>
-                                   
-                                <% } %>
-                                <% if (stat["key"] == "K/d") { %>
-                                <%  playerOne["kd"] = stat["value"] %>
-                                <% } %>
-                                        <% }); %>
-                                            <% console.log(playerOne) %>
-                                            <div class="ui container">
-                                    <div class="ui grey inverted raised segment">
-                                        <h3>LIFETIME STATS:</h3>
-                                            <div class="ui four cards">
-                                                <div class="green raised card">
-                                                    
-                                                        
-                                                        <div class="content">
-                                                            <div class="left floated ui image">
-                                                            <i class="big history icon"></i>
-                                                            </div>
-                                                            <div class="right aligned header">
-                                                                <%=playerOne.matches%>
-                                                            </div>
-                                                            
-                                                            <div class="right aligned sub header">Matches</div>
-                                                        </div>
-                                                    
-                                                  
-                                                </div>
-                                            
-                                            
-                                            
-                                    <div class="green card">
-                                    
-                                    
-                                        <div class="content">
-                                            <div class="left floated ui image">
-                                                <i class="big trophy icon"></i>
-                                            </div>
-                                            <div class="right aligned header">
-                                                <%=playerOne.wins%>
-                                            </div>
-                                    
-                                            <div class="right aligned sub header">Wins</div>
-                                        </div>
-                                    
-                                    
-                                    </div>
-                                            
-                                    <div class="green card">
-                                    
-                                    
-                                        <div class="content">
-                                            <div class="left floated ui image">
-                                                <i class="big crosshairs icon"></i>
-                                            </div>
-                                            <div class="right aligned header stat">
-                                                <%=playerOne.kills%>
-                                            </div>
-                                    
-                                            <div class="right aligned sub header statTitle">Kills</div>
-                                        </div>
-                                    
-                                    
-                                    </div>
-                                            </div>
-                                        
-                                            </div>
-
-                                           
-                        </div>
-                        <a class="ui button" href="/">HOME</a>
+                            <div class="right aligned sub header">Matches</div>
                         </div>
 
-<% include partials/footer %>
+
+                    </div>
+
+
+
+                    <div class="raised card">
+
+
+                        <div class="content">
+                            <div class="left floated ui image">
+                                <i class="big trophy icon"></i>
+                            </div>
+                            <div class="right aligned header">
+                                <%=lifetimeStats.wins%>
+                            </div>
+
+                            <div class="right aligned sub header">Wins</div>
+                        </div>
+
+
+                    </div>
+
+                    <div class="raised card">
+
+
+                        <div class="content">
+                            <div class="left floated ui image">
+                                <i class="big crosshairs icon"></i>
+                            </div>
+                            <div class="right aligned header stat">
+                                <%=lifetimeStats.kills%>
+                            </div>
+
+                            <div class="right aligned sub header statTitle">Kills</div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+        <a class="ui button" href="/">HOME</a>
+    </div>
+
+    <% include partials/footer %>
