@@ -19,13 +19,15 @@ let fortniteAPI = new Fortnite(access,
 app.get("/", (req, res) => {
   
   fortniteAPI.login().then(() => {
-   var news = fortniteAPI.getFortniteNews("en")
-      var status = fortniteAPI.checkFortniteStatus()
-     Promise.all([news, status]) 
-      .then(([news, status]) => {
+   let news = fortniteAPI.getFortniteNews("en")
+      const status = fortniteAPI.checkFortniteStatus()
+      const leaderboard = fortniteAPI.getScoreLeaderBoard("pc", Fortnite.SOLO)
+     Promise.all([news, status, leaderboard]) 
+      .then(([news, status, leaderboard]) => {
         console.log(news);
+        console.log(leaderboard);
        news = news.br
-       res.render("landing", {news: news, status: status});
+       res.render("landing", {news: news, status: status, leaderboard: leaderboard});
       })
       .catch(err => {
         console.log(err);

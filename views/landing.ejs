@@ -1,8 +1,9 @@
 <% include partials/header %>
 
+<div class="hero">
 <p class="status">FORTNITE SERVER STATUS:
    <% if(status===true){ %>
-    <span class="statusLight">
+    <span class="statusUp">
         UP AND RUNNING
     </span>
    <% } else { %>
@@ -41,11 +42,17 @@
   
 </div>
 
-<a href="/stats">Stats</a>
+</div>
 
 
-<div class="ui container">
-    <div class="ui divided items">
+
+
+<div class="ui two column equal width stackable grid">
+<div class="streched row">
+    
+    <div class="ten wide column">
+<div class="ui segment raised">
+    <div class="ui divided items dark">
     <h2 class="section">NEWS!</h2>
    <% news.forEach((article)=>{ %>
     <div class="item">
@@ -65,8 +72,25 @@
         
   <%  }) %>
 
-    
-
+    </div>   
+</div>
+</div>
+<div class="six wide column">
+    <div class="dark ui segment raised">
+        <h2>Leaderboards (PC)</h2>
+        <div class="solo">
+            <h3>SOLO</h3> 
+        </div>    
+        <ol>
+    <% leaderboard.forEach((leader)=>{ %>
+    <% if(leader.rank <= 10) { %>
+            <li><%=leader.displayName%></li>
+    <%  } %>
+        <%  }) %>
+            </ol>
+        </div>
+    </div>
+</div>
 </div>
 </div>
 <% include partials/footer %>

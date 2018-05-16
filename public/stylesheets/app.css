@@ -4,8 +4,25 @@
 }
 
 body {
-    background-color: steelblue;
+    background-color: 
+    #1f1f1f;
+    
 }
+
+
+.hero {
+    background-image: url("/images/Fortnite-2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:800px;
+    opacity: 0.8;
+}
+
+.dark {
+    background-color:#2b2b2b;
+    
+}
+
 
 h1 {
     text-align: center;
@@ -13,21 +30,31 @@ h1 {
     color: whitesmoke;
     font-size: 80px;
     margin-top: 200px;
+    
 }
 
-h2 {
+h2:first-child, h2 {
    font-family: 'BurbankBigCondensed-Black',
    sans-serif;
     color: whitesmoke;
+    margin-top: 30px;
+    text-align: center;
+    font-size: 40px;
 }
 
-.section {
-font-size: 40px;
+p {
+   color: whitesmoke;
 }
+ li {
+     color: whitesmoke;
+     font-size: 16px;
+     font-weight: 800;
+     line-height: 1.5;
+ }
 
 i.big.icon {
     font-size: 4em;
-    color: red;
+    color: rgb(164, 173, 180);
    
 }
 
@@ -47,8 +74,33 @@ text-align: right;
  margin-right:20px;
 }
 
-.statusLight {
+.statusUp {
     color: rgb(30, 199, 66);
+}
+.ui.segment {
+    background: #2b2b2b;
+    margin: 20px;
+}
+
+.ui.segment:first-child {
+margin: 20px;
+}
+
+.solo {
+    background-color:#17c2fe;
+    color: #034a63;
+    height: 40px;
+    display: flex;
+}
+
+.solo h3 {
+    margin-left: 20px;
+    align-self: center;
+}
+
+
+.ui.items{
+    margin-left: 20px;
 }
 .ui.items>.item>.content>.header:not(.ui) {
   font-size: 30px;   
