@@ -4,9 +4,11 @@
 }
 
 body {
-    background-color: 
-    #1f1f1f;
-    
+    background-color: #1f1f1f;
+    color: whitesmoke;
+    font-family: "Roboto",
+    sans-serif;
+    font-size: 16px;
 }
 
 
@@ -15,39 +17,40 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     height:800px;
-    opacity: 0.8;
 }
 
 .dark {
     background-color:#2b2b2b;
-    
 }
 
 
+h1, .action, .status, .statusUp {
+    text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+    
+}
+
 h1 {
     text-align: center;
-    font-family: "BurbankBigCondensed-Black";
-    color: whitesmoke;
-    font-size: 80px;
-    margin-top: 200px;
-    
+       font-size: 6em;
+       margin-top: 200px;
+       font-family: 'BurbankBigCondensed-Black',
+       sans-serif;
+}
+.action {
+    text-align: center;
+    font-size: 3em;
 }
 
 h2:first-child, h2 {
    font-family: 'BurbankBigCondensed-Black',
    sans-serif;
-    color: whitesmoke;
     margin-top: 30px;
     text-align: center;
-    font-size: 40px;
+    font-size: 3em;
 }
 
-p {
-   color: whitesmoke;
-}
  li {
-     color: whitesmoke;
-     font-size: 16px;
+      font-size: 1.25em;
      font-weight: 800;
      line-height: 1.5;
  }
@@ -55,7 +58,6 @@ p {
 i.big.icon {
     font-size: 4em;
     color: rgb(164, 173, 180);
-   
 }
 
 div.value {
@@ -68,15 +70,16 @@ display: inline-block;
 text-align: right;
  font-family: 'BurbankBigCondensed-Black',
  sans-serif;
- color: whitesmoke;
  font-size: 30px;
  margin-top: 20px;
  margin-right:20px;
+ 
 }
 
 .statusUp {
     color: rgb(30, 199, 66);
-}
+   }
+
 .ui.segment {
     background: #2b2b2b;
     margin: 20px;
@@ -84,6 +87,10 @@ text-align: right;
 
 .ui.segment:first-child {
 margin: 20px;
+}
+
+.ui.form .fields {
+    justify-content: center;
 }
 
 .solo {
@@ -103,7 +110,7 @@ margin: 20px;
     margin-left: 20px;
 }
 .ui.items>.item>.content>.header:not(.ui) {
-  font-size: 30px;   
+  font-size: 2em;   
 }
 .ui.items>.item>.content>.header {
    text-align: center;
@@ -116,10 +123,13 @@ div.item {
     height: 250px;
 }
 
-.description{
-    font-family: "Tahoma", sans-serif;
-    font-size: 15px;
+.ui.items>.item>.content>.description {
+ font-family: "Roboto", sans-serif;
+font-size: 16px;
+color: whitesmoke;
 }
+
+
 
 .ui.card,
 .ui.cards>.card {
