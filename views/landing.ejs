@@ -1,106 +1,98 @@
 <% include partials/header %>
 
-<div class="hero">
-<p class="status">FORTNITE SERVER STATUS:
-   <% if(status===true){ %>
-    <span class="statusUp">
-        UP AND RUNNING
-    </span>
-   <% } else { %>
-       <span>
-        DOWN
-    </span>
-  <% } %>
-    
-</p>
+    <div class="hero">
+        <p class="status">FORTNITE SERVER STATUS:
+            <% if(status===true){ %>
+                <span class="statusUp">
+                    UP AND RUNNING
+                </span>
+                <% } else { %>
+                    <span>
+                        DOWN
+                    </span>
+                    <% } %>
+        </p>
 
-<h1>FORTNITE BATTLE ROYALE STATS</h1>
-<h2 class="action">Check Player Stats By Entering Epic Name And Platform Below</span>
+        <h1>FORTNITE BATTLE ROYALE STATS</h1>
+        <h2 class="action">Check Player Stats By Entering Epic Name And Platform Below</span>
 
+            <div class="ui container">
+                <div class="ui form">
+                    <form action="/stats" method="get">
+                        <div class="fields">
+                            <div class="eight wide field">
+                                <div class="ui icon input focus">
+                                    <i class="search icon"></i>
+                                    <input type="text" placeholder="User Name" name="user">
+                                </div>
+                            </div>
 
-
-<div class="ui container">
-
-    
-       
-    <div class="ui form">
-         <form action="/stats" method="get">
-            <div class="fields">
-                  <div class="eight wide field">
-               <div class="ui icon input focus">
-        <i class="search icon"></i>
-            <input type="text" placeholder="User Name" name="user">
-        </div>   
+                            <div class="four wide field">
+                                <select class="ui compact menu platform" name="platform" id="">
+                                    <option class="item" name="selectPlatform">Select Platform</option>
+                                    <option class="item" name="pc" value="pc">PC</option>
+                                    <option class="item" name="xb1" value="xb1">XB1</option>
+                                    <option class="item" value="ps4">PS4</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="ui violet button right floated">Search</button>
+                        </div>
+                    </form>
+                </div>
             </div>
-  <div class="four wide field">
-       <div class="ui input focus">
-            <input type="text" placeholder="Platform" name="platform">
-        </div> 
-  </div>
-        
+    </div>
 
-        <button type="submit" class="ui violet button right floated">Search</button>
+
+    <div class="ui two column equal width stackable grid">
+        <div class="streched row">
+
+            <div class="ten wide column">
+                <div class="ui segment raised">
+                    <div class="ui divided items dark">
+                        <h2 class="section">NEWS!</h2>
+                        <% news.forEach((article)=>{ %>
+                            <div class="item">
+                                <div class="ui image">
+                                    <img src="<%=article.image%>" alt="">
+                                </div>
+                                <div class="content">
+                                    <h3 class="newsTitle header">
+                                        <%=article.title%>
+                                    </h3>
+
+                                    <div class="description">
+                                        <p>
+                                            <%=article.body%>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <%  }) %>
+                    </div>
+                </div>
             </div>
-          
 
-        
-  
-</form> 
-    </div>
-
-
-
-</div>
-
-</div>
-
-
-
-
-<div class="ui two column equal width stackable grid">
-<div class="streched row">
-    
-    <div class="ten wide column">
-<div class="ui segment raised">
-    <div class="ui divided items dark">
-    <h2 class="section">NEWS!</h2>
-   <% news.forEach((article)=>{ %>
-    <div class="item">
-        <div class="ui image">
-            <img src="<%=article.image%>" alt="">
-        </div>
-        <div class="content">
-            <h3 class="newsTitle header"><%=article.title%></h3>
-        
-        <div class="description">
-             <p><%=article.body%></p>
-        </div>
-        </div>
-        
-       
-    </div>
-        
-  <%  }) %>
-
-    </div>   
-</div>
-</div>
-<div class="six wide column">
-    <div class="dark ui segment raised">
-        <h2>Leaderboards (PC)</h2>
-        <div class="solo">
-            <h3>SOLO</h3> 
-        </div>    
-        <ol>
-    <% leaderboard.forEach((leader)=>{ %>
-    <% if(leader.rank <= 10) { %>
-            <li><%=leader.displayName%></li>
-    <%  } %>
-        <%  }) %>
-            </ol>
+            <div class="six wide column">
+                <div class="dark ui segment raised">
+                    <h2>Leaderboards (PC)</h2>
+                    <div class="solo">
+                        <h3>SOLO</h3>
+                    </div>
+                    <ol>
+                        <% leaderboard.forEach((leader)=>{ %>
+                            <% if(leader.rank <= 10) { %>
+                                <li>
+                                    <a href="/stats" class="href">
+                                        <%=leader.displayName%>
+                                    </a>
+                                </li>
+                                <%  } %>
+                                    <%  }) %>
+                    </ol>
+                </div>
+            </div>
         </div>
     </div>
-</div>
-</div>
-</div>
-<% include partials/footer %>
+    </div>
+
+    <% include partials/footer %>
