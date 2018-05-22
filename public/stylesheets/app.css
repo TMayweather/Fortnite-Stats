@@ -11,7 +11,6 @@ body {
     font-size: 16px;
 }
 
-
 .hero {
     background-image: url("/images/Fortnite-2.jpg");
     background-repeat: no-repeat;
@@ -23,10 +22,8 @@ body {
     background-color:#2b2b2b;
 }
 
-
 h1, .action, .status, .statusUp {
-    text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
-    
+    text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);    
 }
 
 h1 {
@@ -36,6 +33,7 @@ h1 {
        font-family: 'BurbankBigCondensed-Black',
        sans-serif;
 }
+
 .action {
     text-align: center;
     font-size: 3em;
@@ -56,15 +54,14 @@ h2:first-child, h2 {
  }
 
 i.big.icon {
-    font-size: 4em;
-    color: rgb(164, 173, 180);
+    font-size: 3em;
+    color: lightslategray;
 }
 
 div.value {
 text-align: center;
 display: inline-block;
 }
-
 
 .status {
 text-align: right;
@@ -93,14 +90,26 @@ margin: 20px;
     justify-content: center;
 }
 
+.solo, .duo, .squad {
+     height: 40px;
+     display: flex;
+}
 .solo {
     background-color:#17c2fe;
     color: #034a63;
-    height: 40px;
-    display: flex;
-}
+ }
 
-.solo h3 {
+ .duo {
+     background-color: #f1ed63;
+     color: black;
+ }
+
+ .squad {
+     background-color: #FFA500;
+    color: #CD6600;
+ }
+
+.solo h3, .duo h3, .squad h3 {
     margin-left: 20px;
     align-self: center;
 }
@@ -123,20 +132,29 @@ div.item {
     height: 250px;
 }
 
+
 .ui.items>.item>.content>.description {
  font-family: "Roboto", sans-serif;
 font-size: 16px;
 color: whitesmoke;
 }
 
-
+.ui.four.cards {
+    margin-top: 20px;
+}
 
 .ui.card,
 .ui.cards>.card {
-    background-color: rgb(47, 33, 129);
+    background-color: #190729;
 }
 
 .ui.cards>.card>.content>.header:not(.ui) {
-    font-size: 2.5em;
+    font-size: 2.0em;
     color: whitesmoke;
+    font-family: "Roboto",
+    sans-serif;
+}
+
+.right.aligned.sub.header {
+    color: lightslategray;
 }

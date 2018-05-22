@@ -1,22 +1,21 @@
 <% include partials/header %>
-    <div class="ui container">
-        <h1>FORTNITE STATS</h1>
-        <div>
-            <h2>
-                <%= info.username %>
-            </h2>
-            <h2>
-                <%= info.platform %>
-            </h2>
-        </div>
 
     <div class="ui container">
-            <div class="ui grey inverted raised segment">
+      <h2>STATS</h2>
+        <div class="results left aligned">
+            <h3 class="results"> Epic Name:
+                <%= info.username %>
+            </h3>
+            <h3> Platform:
+                <%= info.platform.toUpperCase()%>
+            </h3>
+        </div>
+
+        <div class="ui container">
+            <div class="ui segment">
                 <h3>LIFETIME STATS:</h3>
                 <div class="ui four cards">
                     <div class="raised card">
-
-
                         <div class="content">
                             <div class="left floated ui image">
                                 <i class="big history icon"></i>
@@ -24,18 +23,10 @@
                             <div class="right aligned header">
                                 <%=lifetimeStats.matches%>
                             </div>
-
                             <div class="right aligned sub header">Matches</div>
                         </div>
-
-
                     </div>
-
-
-
                     <div class="raised card">
-
-
                         <div class="content">
                             <div class="left floated ui image">
                                 <i class="big trophy icon"></i>
@@ -46,13 +37,8 @@
 
                             <div class="right aligned sub header">Wins</div>
                         </div>
-
-
                     </div>
-
                     <div class="raised card">
-
-
                         <div class="content">
                             <div class="left floated ui image">
                                 <i class="big crosshairs icon"></i>
@@ -63,13 +49,181 @@
 
                             <div class="right aligned sub header statTitle">Kills</div>
                         </div>
-
-
                     </div>
+                                   <div class="raised card">
+    <div class="content">
+        <div class="left floated ui image">
+            <i class="big history icon"></i>
+        </div>
+        <div class="right aligned header">
+            <%=lifetimeStats.timePlayed%>
+        </div>
+        <div class="right aligned sub header">Time Played</div>
+    </div>
+</div>
                 </div>
-
+ 
             </div>
 
+
+            <div class="ui segment">
+                <div class="solo">
+                    <h3>SOLO</h3>
+                </div>
+                <div class="ui four cards">
+                    <div class="raised card">
+                        <div class="content">
+                            <div class="left floated ui image">
+                                <i class="big history icon"></i>
+                            </div>
+                            <div class="right aligned header">
+                                <%=solo.matches%>
+                            </div>
+                            <div class="right aligned sub header">Matches</div>
+                        </div>
+                    </div>
+                    <div class="raised card">
+                        <div class="content">
+                            <div class="left floated ui image">
+                                <i class="big trophy icon"></i>
+                            </div>
+                            <div class="right aligned header">
+                                <%=solo.wins%>
+                            </div>
+                            <div class="right aligned sub header">Wins</div>
+                        </div>
+                    </div>
+                    <div class="raised card">
+                        <div class="content">
+                            <div class="left floated ui image">
+                                <i class="big crosshairs icon"></i>
+                            </div>
+                            <div class="right aligned header stat">
+                                <%=solo.kills%>
+                            </div>
+                            <div class="right aligned sub header statTitle">Kills</div>
+                        </div>
+                    </div>
+                    <div class="raised card">
+                        <div class="content">
+                            <div class="left floated ui image">
+                                <i class="big crosshairs icon"></i>
+                            </div>
+                            <div class="right aligned header stat">
+                                <%=solo.killsPerMatch%>
+                            </div>
+                                
+                            <div class="right aligned sub header statTitle">Kills/Match</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ui segment">
+                <div class="duo">
+                    <h3>DUO</h3>
+                </div>
+                <div class="ui four cards">
+                    <div class="raised card">
+                        <div class="content">
+                            <div class="left floated ui image">
+                                <i class="big history icon"></i>
+                            </div>
+                            <div class="right aligned header">
+                                <%=duo.matches%>
+                            </div>
+                            <div class="right aligned sub header">Matches</div>
+                        </div>
+                    </div>
+                    <div class="raised card">
+                        <div class="content">
+                            <div class="left floated ui image">
+                                <i class="big trophy icon"></i>
+                            </div>
+                            <div class="right aligned header">
+                                <%=duo.wins%>
+                            </div>
+
+                            <div class="right aligned sub header">Wins</div>
+                        </div>
+                    </div>
+                    <div class="raised card">
+                        <div class="content">
+                            <div class="left floated ui image">
+                                <i class="big crosshairs icon"></i>
+                            </div>
+                            <div class="right aligned header stat">
+                                <%=duo.kills%>
+                            </div>
+                            <div class="right aligned sub header statTitle">Kills</div>
+                        </div>
+                    </div>
+                    <div class="raised card">
+                        <div class="content">
+                            <div class="left floated ui image">
+                                <i class="big crosshairs icon"></i>
+                            </div>
+                            <div class="right aligned header stat">
+                            </div>
+
+                            <div class="right aligned sub header statTitle">K/D</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+<div class="ui segment">
+    <div class="squad">
+        <h3>SQUADS</h3>
+    </div>
+    <div class="ui four cards">
+        <div class="raised card">
+            <div class="content">
+                <div class="left floated ui image">
+                    <i class="big history icon"></i>
+                </div>
+                <div class="right aligned header">
+                    <%=squad.matches%>
+                </div>
+                <div class="right aligned sub header">Matches</div>
+            </div>
+        </div>
+        <div class="raised card">
+            <div class="content">
+                <div class="left floated ui image">
+                    <i class="big trophy icon"></i>
+                </div>
+                <div class="right aligned header">
+                    <%=squad.wins%>
+                </div>
+
+                <div class="right aligned sub header">Wins</div>
+            </div>
+        </div>
+        <div class="raised card">
+            <div class="content">
+                <div class="left floated ui image">
+                    <i class="big crosshairs icon"></i>
+                </div>
+                <div class="right aligned header stat">
+                    <%=squad.kills%>
+                </div>
+                <div class="right aligned sub header statTitle">Kills</div>
+            </div>
+        </div>
+        <div class="raised card">
+            <div class="content">
+                <div class="left floated ui image">
+                    <i class="big crosshairs icon"></i>
+                </div>
+                <div class="right aligned header stat">
+                </div>
+
+                <div class="right aligned sub header statTitle">K/D</div>
+            </div>
+        </div>
+    </div>
+</div>
 
         </div>
         <a class="ui button" href="/">HOME</a>
