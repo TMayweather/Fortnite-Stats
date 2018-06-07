@@ -2,6 +2,7 @@
 
     <div class="ui container">
       <h2>STATS</h2>
+    <a class="ui button" href="/">HOME</a>
         <div class="results left aligned">
             <h3 class="results"> Epic Name:
                 <%= info.username %>
@@ -164,9 +165,10 @@
                                 <i class="big crosshairs icon"></i>
                             </div>
                             <div class="right aligned header stat">
+                               <%= duo.killsPerMatch %>
                             </div>
 
-                            <div class="right aligned sub header statTitle">K/D</div>
+                            <div class="right aligned sub header statTitle">Kills/Match</div>
                         </div>
                     </div>
                 </div>
@@ -217,9 +219,10 @@
                     <i class="big crosshairs icon"></i>
                 </div>
                 <div class="right aligned header stat">
+                    <%= squad.killsPerMatch %>
                 </div>
 
-                <div class="right aligned sub header statTitle">K/D</div>
+                <div class="right aligned sub header statTitle">Kills/Match</div>
             </div>
         </div>
     </div>
